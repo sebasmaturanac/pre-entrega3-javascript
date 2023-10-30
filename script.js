@@ -37,6 +37,9 @@ function searchMovie(searchQuery) {
       titleElement.textContent = `Título: ${data.Title}`;
       yearElement.textContent = `Año: ${data.Year}`;
       plotElement.textContent = `Trama: ${data.Plot}`;
+      
+      // Almacenar los resultados en localStorage
+      localStorage.setItem('movieData', JSON.stringify(data));
     })
     .catch((error) => {
       // Si ocurre un error, muestra una alerta
